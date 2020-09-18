@@ -4,22 +4,13 @@ import logo from "./logo.svg";
 import "tachyons";
 import Scroll from "./Scroll";
 import Data from "./Data";
-// import slowdance from "./audioclips/slowdance.mp3";
 import { Howl, Howler } from "howler";
 import { Cardlist } from "./Cardlist";
+import { Musiclist } from "./Musiclist";
 
 const sound = "slowdance.mp3";
 
 class App extends Component {
-  // constructor(props) {
-  //   super();
-  //   this.state = { value: false };
-  // }
-  Soundplay = src => {
-    const sound = new Howl({ src });
-
-    sound.play();
-  };
   RenderButton = () => {
     return (
       <button
@@ -44,6 +35,7 @@ class App extends Component {
         <div className="content">
           {" "}
           <Cardlist />
+          <Musiclist />
         </div>
       </div>
     );

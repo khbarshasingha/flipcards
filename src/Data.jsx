@@ -28,3 +28,9 @@ export const Data = [
     backsrc: "back7.jpg"
   }
 ];
+const Musicdata = [
+  {
+    src: "lovemelikeyoudo.mp3"
+  }
+];
+export { Musicdata };

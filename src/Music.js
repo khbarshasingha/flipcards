@@ -1,23 +1,28 @@
-import React, { useState } from "react";
-import slowdance from "./audioclips/slowdance.mp3";
+import React, { Component, useState, useEffect } from "react";
+import { Musiclist } from "./Musiclist";
+import { Musicdata } from "./Data";
 import { Howl, Howler } from "howler";
 
-const Soundplay = src => {
-  const sound = new Howl({ src });
-  sound.play();
+export const Music = ({ index, src }) => {
+  // const [value, setValue] = useState(false);
+
+  // useEffect(() => {
+  //   const Soundplay = src => {
+  //     const sound = new Howl({ src });
+  //     if (value === true) {
+  //       sound.play();
+  //     } else {
+  //       sound.pause();
+  //     }
+  //   };
+  // });
+  const Soundplay = src => {
+    const sound = new Howl({ src });
+
+    sound.play();
+  };
+
+  // return <button onClick={() => setValue((value = true))}>Play me </button>;
+
+  return <button onClick={() => Soundplay(src)}>Play me </button>;
 };
-const Music = () => {
-  return (
-    <div>
-      {Howler.volume(1.0)}
-      <button
-        onClick={() => {
-          this.Soundplay(slowdance);
-        }}
-      >
-        Play me{" "}
-      </button>
-    </div>
-  );
-};
-export default Music;
